@@ -10,20 +10,26 @@
 <body>
     <h1>Olá Mundo</h1>
     <div>
-        <input type="number" value="n1"> Digite um número </input>
+        <input type="number" id="n1"> Digite um número </input>
         <br>
-        <input type="number" value="n2"> Digite outro número </input>
+        <input type="number" id="n2"> Digite outro número </input>
     </div>
 
     <div>
-        <button type="button" onclick=alert(console.log(somar()))>
+        <button type="button" onclick=somar()>
             Somar
         </button>
     </div>
 
+    <div id="resultado">
+
+    </div>
+
     <script>
-        function somar(n1, n2) {
-            return n1 + n2
+        function somar() {
+            const n1 = document.getElementById("n1").value
+            const n2 = document.getElementById("n2").value
+            document.getElementById("resultado").innerHTML = +n1 + +n2
         }
     </script>
 </body>
